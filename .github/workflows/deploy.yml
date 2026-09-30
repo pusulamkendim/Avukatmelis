@@ -1,0 +1,60 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: avukatmelis-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Upload to production
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        env:
+          SFTP_SSH_KEY: ${{ secrets.SFTP_SSH_KEY }}
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d "$HOME/.ssh"
+          printf '%s\n' "$SFTP_SSH_KEY" > "$HOME/.ssh/deploy_key"
+          printf '%s\n' "$SFTP_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/deploy_key" "$HOME/.ssh/known_hosts"
+
+      - name: Upload website over SFTP
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+        run: |
+          sftp \
+            -b - \
+            -i "$HOME/.ssh/deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            "$SFTP_USER@$SFTP_HOST" <<'SFTP_COMMANDS'
+          -mkdir public_html/assets
+          put index.html public_html/index.html
+          put index.html public_html/index.htm
+          put assets/* public_html/assets/
+          SFTP_COMMANDS
+
+      - name: Verify live website
+        run: |
+          curl --fail --location --silent --show-error \
+            --retry 4 --retry-delay 3 \
+            https://avukatmelisbozkurt.com/ \
+            --output live-index.html
+          cmp --silent index.html live-index.html
