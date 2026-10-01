@@ -11,11 +11,11 @@
 :root{
   --paper:#fff;
   --ink:#171717;
-  --muted:#66615c;
-  --burgundy:#6d2330;
-  --green:#2e5948;
-  --gold:#ad8742;
-  --hairline:#d9d4cc;
+  --muted:#666;
+  --burgundy:#000;
+  --green:#000;
+  --gold:#000;
+  --hairline:#d7d7d7;
   --page:794px;
 }
 *{box-sizing:border-box}
@@ -74,7 +74,7 @@ img{display:block;max-width:100%}
   object-fit:cover;
   object-position:center top;
   border:1px solid var(--ink);
-  filter:grayscale(.08) contrast(1.02);
+  filter:grayscale(1) contrast(1.02);
 }
 .name-block{padding-top:4px}
 .role{
@@ -94,14 +94,14 @@ h1{
   margin-top:19px;
   display:grid;
   gap:5px;
-  color:#2e2c2a;
+  color:#2e2e2e;
   font-size:13px;
 }
 .meta b{color:var(--ink)}
 .rule{
   height:3px;
   margin:34px 0 38px;
-  background:linear-gradient(90deg,var(--burgundy) 0 43%,var(--green) 43% 76%,var(--gold) 76% 100%);
+  background:#000;
 }
 section{margin-top:38px}
 .section-label{
@@ -170,7 +170,7 @@ p{margin:0 0 17px}
 .contact-line span:first-child{color:var(--muted)}
 .note{
   margin-top:38px;
-  color:#77716a;
+  color:#777;
   font-size:10px;
   line-height:1.55;
 }
@@ -225,7 +225,6 @@ p{margin:0 0 17px}
       <div class="meta">
         <div data-i18n="bar">İzmir Barosu · Sicil 12098</div>
         <div><a href="mailto:av.melisyeter@gmail.com">av.melisyeter@gmail.com</a></div>
-        <div><a href="tel:+905075585823">+90 507 558 58 23</a></div>
       </div>
     </div>
   </header>
@@ -234,12 +233,14 @@ p{margin:0 0 17px}
 
   <section aria-labelledby="ozgecmis">
     <div class="section-label" id="ozgecmis" data-i18n="bio_label">01 / ÖZGEÇMİŞ</div>
-    <p class="lede" data-i18n="bio_1">Türkiye’de bilinen adıyla Avukat Melis Nur Yeter Bozkurt, 18 Şubat 1992’de İzmir’in Bornova ilçesinde doğdu.</p>
-    <p data-i18n="bio_2">Öğrenim hayatına İzmir’de başladı. Konak Anadolu Lisesi’nde fen alanında eğitim görürken yönünü sosyal bilimlere çevirdi. Üniversite sınavında ilk 8.000 içinde yer alarak Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı ve 2014 yılında mezun oldu.</p>
-    <p data-i18n="bio_3">Bir mali müşavir ve vergi memurunun tek çocuğu olarak yetişen Bozkurt, Dokuz Eylül Üniversitesi’nde Vergi Hukuku yüksek lisans eğitimine devam etmektedir.</p>
+    <p class="lede" data-i18n="bio_1">Türkiye Cumhuriyeti'nde bilinen adıyla Avukat Melis Nur Yeter Bozkurt, 18 Şubat 1992’de İzmir’in Bornova ilçesinde dünyaya indi.</p>
+    <p data-i18n="bio_2">Eğitim, öğretim hayatına 1997 yılında İzmir Maliye Bakanlığı Anaokulu’nda birinci olarak başladı. Buca Tuğsavul İlköğretim Okulu’nu tamamladı. Konak Anadolu Lisesi’nde fen alanında eğitim görürken yönünü sosyal bilimlere çevirdi. 2010 yılında girdiği üniversite sınavında ilk 8 bin içinde yer alarak Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı ve 2014 yılında mezun oldu.</p>
+    <p data-i18n="bio_3">Bir vergi memuru ve mali müşavirin tek çocuğu olarak yetişen Bozkurt, Dokuz Eylül Üniversitesi’nde Vergi Hukuku yüksek lisans eğitimine devam etmektedir.</p>
 
     <div class="timeline" aria-label="Eğitim ve meslek kronolojisi">
-      <div class="row"><span class="year">1992</span><p data-i18n="tl_1992">İzmir, Bornova’da doğdu.</p></div>
+      <div class="row"><span class="year">1992</span><p data-i18n="tl_1992">İzmir, Bornova’da dünyaya indi.</p></div>
+      <div class="row"><span class="year">1997</span><p data-i18n="tl_1997">İzmir Maliye Bakanlığı Anaokulu’nda eğitim hayatına başladı.</p></div>
+      <div class="row"><span class="year" data-i18n="primary_label">İlköğretim</span><p data-i18n="tl_primary">Buca Tuğsavul İlköğretim Okulu’nu tamamladı.</p></div>
       <div class="row"><span class="year">2010</span><p data-i18n="tl_2010">Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı.</p></div>
       <div class="row"><span class="year">2014</span><p data-i18n="tl_2014">Akdeniz Üniversitesi Hukuk Fakültesi’nden mezun oldu.</p></div>
       <div class="row"><time datetime="2016-01-06">06.01.2016</time><p data-i18n="tl_2016">Avukatlık yeminini ederek mesleğe başladı.</p></div>
@@ -247,9 +248,8 @@ p{margin:0 0 17px}
     </div>
   </section>
 
-  <section aria-labelledby="meslek">
-    <div class="section-label" id="meslek" data-i18n="practice_label">02 / MESLEKİ ÇALIŞMA</div>
-    <p data-i18n="practice_text">İzmir Barosu Genç Avukatlar Meclisi’nde görev alan Bozkurt; meslek hayatı boyunca adli ve idari davalar ile icra dosyalarında çalıştı. 2020 yılı sonrasında çalışmalarını ağırlıklı olarak ağır ceza hukuku ve ceza yargılaması alanında sürdürmektedir.</p>
+  <section>
+    <p data-i18n="practice_text">İzmir Barosu Genç Avukatlar Meclisi’nde görev alan Bozkurt; 10 yıllık meslek hayatı boyunca adli, idari davalar ile icra dosyalarında çalıştı. 2020 yılı sonrasında çalışmalarını ağırlıklı olarak ağır ceza hukuku alanında sürdürmektedir.</p>
   </section>
 
   <section aria-labelledby="alanlar">
@@ -261,15 +261,15 @@ p{margin:0 0 17px}
       <li><span class="n">04</span><span data-i18n="area_4">Anayasa Mahkemesi bireysel başvuruları</span></li>
       <li><span class="n">05</span><span data-i18n="area_5">Avrupa İnsan Hakları Mahkemesi başvuruları</span></li>
       <li><span class="n">06</span><span data-i18n="area_6">İnfaz danışmanlığı</span></li>
-      <li><span class="n">07</span><span data-i18n="area_7">Soruşturma ve kovuşturma işlemleri</span></li>
+      <li><span class="n">07</span><span data-i18n="area_7">Ceza soruşturma ve kovuşturma işlemleri</span></li>
     </ol>
   </section>
 
   <section class="contact" aria-labelledby="iletisim">
     <div class="section-label" id="iletisim" data-i18n="contact_label">04 / İLETİŞİM</div>
     <div class="contact-line"><span data-i18n="email">E-posta</span><a href="mailto:av.melisyeter@gmail.com">av.melisyeter@gmail.com</a></div>
-    <div class="contact-line"><span data-i18n="phone">Telefon</span><a href="tel:+905075585823">+90 507 558 58 23</a></div>
     <div class="contact-line"><span data-i18n="web">Web</span><span>avukatmelisbozkurt.com</span></div>
+    <div class="contact-line"><span data-i18n="bar_web">İzmir Barosu</span><a href="https://www.izmirbarosu.org.tr/" target="_blank" rel="noopener noreferrer">www.izmirbarosu.org.tr</a></div>
   </section>
 
   <p class="note"><span data-i18n="note">Bu internet sitesindeki içerikler genel bilgilendirme amaçlıdır.</span> © <span id="year"></span> Av. Melis Bozkurt.</p>
@@ -282,17 +282,19 @@ const translations = {
     role:"AVUKAT",
     bar:"İzmir Barosu · Sicil 12098",
     bio_label:"01 / ÖZGEÇMİŞ",
-    bio_1:"Türkiye’de bilinen adıyla Avukat Melis Nur Yeter Bozkurt, 18 Şubat 1992’de İzmir’in Bornova ilçesinde doğdu.",
-    bio_2:"Öğrenim hayatına İzmir’de başladı. Konak Anadolu Lisesi’nde fen alanında eğitim görürken yönünü sosyal bilimlere çevirdi. Üniversite sınavında ilk 8.000 içinde yer alarak Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı ve 2014 yılında mezun oldu.",
-    bio_3:"Bir mali müşavir ve vergi memurunun tek çocuğu olarak yetişen Bozkurt, Dokuz Eylül Üniversitesi’nde Vergi Hukuku yüksek lisans eğitimine devam etmektedir.",
-    tl_1992:"İzmir, Bornova’da doğdu.",
+    bio_1:"Türkiye Cumhuriyeti'nde bilinen adıyla Avukat Melis Nur Yeter Bozkurt, 18 Şubat 1992’de İzmir’in Bornova ilçesinde dünyaya indi.",
+    bio_2:"Eğitim, öğretim hayatına 1997 yılında İzmir Maliye Bakanlığı Anaokulu’nda birinci olarak başladı. Buca Tuğsavul İlköğretim Okulu’nu tamamladı. Konak Anadolu Lisesi’nde fen alanında eğitim görürken yönünü sosyal bilimlere çevirdi. 2010 yılında girdiği üniversite sınavında ilk 8 bin içinde yer alarak Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı ve 2014 yılında mezun oldu.",
+    bio_3:"Bir vergi memuru ve mali müşavirin tek çocuğu olarak yetişen Bozkurt, Dokuz Eylül Üniversitesi’nde Vergi Hukuku yüksek lisans eğitimine devam etmektedir.",
+    tl_1992:"İzmir, Bornova’da dünyaya indi.",
+    tl_1997:"İzmir Maliye Bakanlığı Anaokulu’nda eğitim hayatına başladı.",
+    primary_label:"İlköğretim",
+    tl_primary:"Buca Tuğsavul İlköğretim Okulu’nu tamamladı.",
     tl_2010:"Akdeniz Üniversitesi Hukuk Fakültesi’nde hukuk eğitimine başladı.",
     tl_2014:"Akdeniz Üniversitesi Hukuk Fakültesi’nden mezun oldu.",
     tl_2016:"Avukatlık yeminini ederek mesleğe başladı.",
     today:"Bugün",
     tl_today:"İzmir Barosu üyesi; Dokuz Eylül Üniversitesi Vergi Hukuku yüksek lisans öğrencisi.",
-    practice_label:"02 / MESLEKİ ÇALIŞMA",
-    practice_text:"İzmir Barosu Genç Avukatlar Meclisi’nde görev alan Bozkurt; meslek hayatı boyunca adli ve idari davalar ile icra dosyalarında çalıştı. 2020 yılı sonrasında çalışmalarını ağırlıklı olarak ağır ceza hukuku ve ceza yargılaması alanında sürdürmektedir.",
+    practice_text:"İzmir Barosu Genç Avukatlar Meclisi’nde görev alan Bozkurt; 10 yıllık meslek hayatı boyunca adli, idari davalar ile icra dosyalarında çalıştı. 2020 yılı sonrasında çalışmalarını ağırlıklı olarak ağır ceza hukuku alanında sürdürmektedir.",
     areas_label:"03 / ÇALIŞMA ALANLARI",
     area_1:"Olağanüstü kanun yolları",
     area_2:"Yargıtay Cumhuriyet Başsavcılığı itirazı",
@@ -300,11 +302,11 @@ const translations = {
     area_4:"Anayasa Mahkemesi bireysel başvuruları",
     area_5:"Avrupa İnsan Hakları Mahkemesi başvuruları",
     area_6:"İnfaz danışmanlığı",
-    area_7:"Soruşturma ve kovuşturma işlemleri",
+    area_7:"Ceza soruşturma ve kovuşturma işlemleri",
     contact_label:"04 / İLETİŞİM",
     email:"E-posta",
-    phone:"Telefon",
     web:"Web",
+    bar_web:"İzmir Barosu",
     note:"Bu internet sitesindeki içerikler genel bilgilendirme amaçlıdır."
   },
   en: {
@@ -313,17 +315,19 @@ const translations = {
     role:"ATTORNEY AT LAW",
     bar:"İzmir Bar Association · Reg. No. 12098",
     bio_label:"01 / BIOGRAPHY",
-    bio_1:"Known professionally in Türkiye as Attorney Melis Nur Yeter Bozkurt, she was born on 18 February 1992 in Bornova, İzmir.",
-    bio_2:"She began her schooling in İzmir. While studying in the science track at Konak Anatolian High School, she redirected her academic focus toward the social sciences. Ranking within the top 8,000 in the university entrance examination, she began her legal studies at Akdeniz University Faculty of Law and graduated in 2014.",
-    bio_3:"Raised as the only child of a certified public accountant and a tax officer, Bozkurt is currently pursuing a master's degree in Tax Law at Dokuz Eylül University.",
-    tl_1992:"Born in Bornova, İzmir.",
+    bio_1:"Known professionally in the Republic of Türkiye as Attorney Melis Nur Yeter Bozkurt, she came into the world on 18 February 1992 in Bornova, İzmir.",
+    bio_2:"She began her education in 1997 at İzmir Ministry of Finance Kindergarten, where she ranked first. She completed primary education at Buca Tuğsavul Primary School. While studying in the science track at Konak Anatolian High School, she redirected her academic focus toward the social sciences. In 2010, she ranked within the top 8 thousand in the university entrance examination, began her legal studies at Akdeniz University Faculty of Law and graduated in 2014.",
+    bio_3:"Raised as the only child of a tax officer and certified public accountant, Bozkurt is currently pursuing a master's degree in Tax Law at Dokuz Eylül University.",
+    tl_1992:"Came into the world in Bornova, İzmir.",
+    tl_1997:"Began her education at İzmir Ministry of Finance Kindergarten.",
+    primary_label:"Primary",
+    tl_primary:"Completed primary education at Buca Tuğsavul Primary School.",
     tl_2010:"Began studying law at Akdeniz University Faculty of Law.",
     tl_2014:"Graduated from Akdeniz University Faculty of Law.",
     tl_2016:"Took the attorney's oath and began her legal practice.",
     today:"Today",
     tl_today:"Member of the İzmir Bar Association; master's student in Tax Law at Dokuz Eylül University.",
-    practice_label:"02 / LEGAL PRACTICE",
-    practice_text:"Bozkurt served on the İzmir Bar Association Young Lawyers Assembly. Throughout her career, she has worked on judicial and administrative proceedings as well as enforcement files. Since the end of 2020, she has focused primarily on serious criminal law and criminal proceedings.",
+    practice_text:"Bozkurt served on the İzmir Bar Association Young Lawyers Assembly. During her 10-year legal career, she has worked on judicial and administrative cases as well as enforcement files. Since the end of 2020, she has focused primarily on serious criminal law.",
     areas_label:"03 / PRACTICE AREAS",
     area_1:"Extraordinary legal remedies",
     area_2:"Objection before the Office of the Chief Public Prosecutor at the Court of Cassation",
@@ -331,11 +335,11 @@ const translations = {
     area_4:"Individual applications to the Constitutional Court",
     area_5:"Applications to the European Court of Human Rights",
     area_6:"Sentence enforcement consultancy",
-    area_7:"Investigation and prosecution proceedings",
+    area_7:"Criminal investigation and prosecution proceedings",
     contact_label:"04 / CONTACT",
     email:"Email",
-    phone:"Phone",
     web:"Web",
+    bar_web:"İzmir Bar Association",
     note:"The content of this website is provided for general informational purposes."
   },
   fr: {
@@ -344,17 +348,19 @@ const translations = {
     role:"AVOCATE",
     bar:"Barreau d'İzmir · N° d'inscription 12098",
     bio_label:"01 / BIOGRAPHIE",
-    bio_1:"Connue professionnellement en Turquie sous le nom d'Avocate Melis Nur Yeter Bozkurt, elle est née le 18 février 1992 dans le district de Bornova, à İzmir.",
-    bio_2:"Elle a commencé sa scolarité à İzmir. Alors qu'elle suivait la filière scientifique au lycée anatolien de Konak, elle a réorienté son parcours vers les sciences sociales. Classée parmi les 8 000 premiers au concours d'entrée à l'université, elle a commencé ses études de droit à la Faculté de droit de l'Université Akdeniz et a obtenu son diplôme en 2014.",
-    bio_3:"Fille unique d'un expert-comptable et d'un agent des impôts, Bozkurt poursuit actuellement un master en droit fiscal à l'Université Dokuz Eylül.",
-    tl_1992:"Née à Bornova, İzmir.",
+    bio_1:"Connue professionnellement en République de Turquie sous le nom d'Avocate Melis Nur Yeter Bozkurt, elle est venue au monde le 18 février 1992 dans le district de Bornova, à İzmir.",
+    bio_2:"Elle a commencé sa scolarité en 1997 à l'école maternelle du ministère des Finances d'İzmir, où elle s'est classée première. Elle a terminé l'enseignement primaire à l'école Buca Tuğsavul. Alors qu'elle suivait la filière scientifique au lycée anatolien de Konak, elle a réorienté son parcours vers les sciences sociales. En 2010, elle s'est classée parmi les 8 mille premiers au concours d'entrée à l'université, puis a commencé ses études de droit à la Faculté de droit de l'Université Akdeniz et a obtenu son diplôme en 2014.",
+    bio_3:"Fille unique d'un agent des impôts et d'un expert-comptable, Bozkurt poursuit actuellement un master en droit fiscal à l'Université Dokuz Eylül.",
+    tl_1992:"Venue au monde à Bornova, İzmir.",
+    tl_1997:"Début de sa scolarité à l'école maternelle du ministère des Finances d'İzmir.",
+    primary_label:"Primaire",
+    tl_primary:"Fin de l'enseignement primaire à l'école Buca Tuğsavul.",
     tl_2010:"Début de ses études à la Faculté de droit de l'Université Akdeniz.",
     tl_2014:"Diplômée de la Faculté de droit de l'Université Akdeniz.",
     tl_2016:"Prestation du serment d'avocate et début de sa pratique professionnelle.",
     today:"Aujourd'hui",
     tl_today:"Membre du Barreau d'İzmir ; étudiante en master de droit fiscal à l'Université Dokuz Eylül.",
-    practice_label:"02 / PRATIQUE PROFESSIONNELLE",
-    practice_text:"Bozkurt a siégé à l'Assemblée des jeunes avocats du Barreau d'İzmir. Au cours de sa carrière, elle a travaillé sur des procédures judiciaires et administratives ainsi que sur des dossiers d'exécution. Depuis la fin de l'année 2020, elle concentre principalement son activité sur le droit pénal, notamment les affaires criminelles graves, et la procédure pénale.",
+    practice_text:"Bozkurt a siégé à l'Assemblée des jeunes avocats du Barreau d'İzmir. Au cours de ses 10 années de carrière, elle a travaillé sur des affaires judiciaires et administratives ainsi que sur des dossiers d'exécution. Depuis la fin de l'année 2020, elle concentre principalement son activité sur le droit pénal relatif aux crimes graves.",
     areas_label:"03 / DOMAINES D'INTERVENTION",
     area_1:"Voies de recours extraordinaires",
     area_2:"Recours devant le Parquet général près la Cour de cassation",
@@ -362,11 +368,11 @@ const translations = {
     area_4:"Recours individuels devant la Cour constitutionnelle",
     area_5:"Requêtes devant la Cour européenne des droits de l'homme",
     area_6:"Conseil en matière d'exécution des peines",
-    area_7:"Procédures d'enquête et de poursuite",
+    area_7:"Procédures d'enquête et de poursuite pénales",
     contact_label:"04 / CONTACT",
     email:"E-mail",
-    phone:"Téléphone",
     web:"Web",
+    bar_web:"Barreau d'İzmir",
     note:"Le contenu de ce site internet est fourni uniquement à titre d'information générale."
   },
   ru: {
@@ -375,17 +381,19 @@ const translations = {
     role:"АДВОКАТ",
     bar:"Адвокатская палата Измира · Рег. № 12098",
     bio_label:"01 / БИОГРАФИЯ",
-    bio_1:"Известная в Турции под профессиональным именем адвокат Мелис Нур Йетер Бозкурт, родилась 18 февраля 1992 года в районе Борнова города Измир.",
-    bio_2:"Она начала школьное образование в Измире. Обучаясь на естественно-научном направлении в Анатолийском лицее Конак, она сменила академическое направление на социальные науки. Войдя в число первых 8 000 участников вступительного экзамена в университет, она начала изучать право на юридическом факультете Университета Акдениз и окончила его в 2014 году.",
-    bio_3:"Будучи единственным ребёнком в семье финансового консультанта и сотрудника налоговой службы, Бозкурт в настоящее время продолжает обучение в магистратуре по налоговому праву в Университете Докуз Эйлюль.",
-    tl_1992:"Родилась в Борнове, Измир.",
+    bio_1:"Известная в Турецкой Республике под профессиональным именем адвокат Мелис Нур Йетер Бозкурт, появилась на свет 18 февраля 1992 года в районе Борнова города Измир.",
+    bio_2:"Она начала образование в 1997 году в детском саду Министерства финансов Измира, заняв первое место. Начальное образование завершила в школе Buca Tuğsavul. Обучаясь на естественно-научном направлении в Анатолийском лицее Конак, она сменила академическое направление на социальные науки. В 2010 году она вошла в число первых 8 тысяч участников вступительного экзамена в университет, начала изучать право на юридическом факультете Университета Акдениз и окончила его в 2014 году.",
+    bio_3:"Будучи единственным ребёнком сотрудника налоговой службы и финансового консультанта, Бозкурт в настоящее время продолжает обучение в магистратуре по налоговому праву в Университете Докуз Эйлюль.",
+    tl_1992:"Появилась на свет в Борнове, Измир.",
+    tl_1997:"Начала образование в детском саду Министерства финансов Измира.",
+    primary_label:"Начальная школа",
+    tl_primary:"Завершила начальное образование в школе Buca Tuğsavul.",
     tl_2010:"Начала обучение на юридическом факультете Университета Акдениз.",
     tl_2014:"Окончила юридический факультет Университета Акдениз.",
     tl_2016:"Принесла присягу адвоката и начала юридическую практику.",
     today:"Сегодня",
     tl_today:"Член Адвокатской палаты Измира; магистрант по налоговому праву Университета Докуз Эйлюль.",
-    practice_label:"02 / ПРОФЕССИОНАЛЬНАЯ ДЕЯТЕЛЬНОСТЬ",
-    practice_text:"Бозкурт входила в Молодёжную ассамблею адвокатов Адвокатской палаты Измира. За время практики она работала по судебным и административным делам, а также по исполнительным производствам. С конца 2020 года основное внимание уделяет уголовному праву и уголовному судопроизводству, включая дела о тяжких преступлениях.",
+    practice_text:"Бозкурт входила в Молодёжную ассамблею адвокатов Адвокатской палаты Измира. За 10 лет юридической практики она работала по судебным и административным делам, а также по исполнительным производствам. С конца 2020 года основное внимание уделяет уголовному праву по тяжким преступлениям.",
     areas_label:"03 / НАПРАВЛЕНИЯ ПРАКТИКИ",
     area_1:"Чрезвычайные средства правовой защиты",
     area_2:"Возражение в Генеральную прокуратуру при Кассационном суде",
@@ -393,11 +401,11 @@ const translations = {
     area_4:"Индивидуальные жалобы в Конституционный суд",
     area_5:"Жалобы в Европейский суд по правам человека",
     area_6:"Консультирование по вопросам исполнения наказаний",
-    area_7:"Следственные и судебные процедуры",
+    area_7:"Уголовные следственные и судебные процедуры",
     contact_label:"04 / КОНТАКТЫ",
     email:"Эл. почта",
-    phone:"Телефон",
     web:"Сайт",
+    bar_web:"Адвокатская палата Измира",
     note:"Содержание этого сайта носит исключительно общий информационный характер."
   }
 };
@@ -426,7 +434,7 @@ setLanguage(initial);
 select.addEventListener("change", (event) => setLanguage(event.target.value));
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Melis Bozkurt","jobTitle":"Avukat","url":"https://avukatmelisbozkurt.com/","email":"mailto:av.melisyeter@gmail.com","telephone":"+90 507 558 58 23","alumniOf":{"@type":"CollegeOrUniversity","name":"Akdeniz Üniversitesi"}}
+{"@context":"https://schema.org","@type":"Person","name":"Melis Bozkurt","jobTitle":"Avukat","url":"https://avukatmelisbozkurt.com/","email":"mailto:av.melisyeter@gmail.com","alumniOf":{"@type":"CollegeOrUniversity","name":"Akdeniz Üniversitesi"}}
 </script>
 </body>
 </html>
